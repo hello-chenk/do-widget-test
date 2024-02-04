@@ -1,5 +1,5 @@
 {
-  "name": "do-widget",
+  "name": "@sendingme/do-widget",
   "version": "0.0.2",
   "description": "a widget lib",
   "type": "module",
@@ -7,7 +7,7 @@
     "test": "echo \"no test specified\"",
     "build": "rollup -c"
   },
-  "keywords": [],
+  "keywords": ["components", "MUI"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
