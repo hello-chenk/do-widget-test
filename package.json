@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "description": "a widget lib",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"no test specified\"",
     "build": "rollup -c"
