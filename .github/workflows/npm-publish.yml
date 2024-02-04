@@ -9,36 +9,27 @@ on:
   #   types: [created]
 
 jobs:
-  deps: 
+  test:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
       - run: yarn
-
-  build:
-    runs-on: ubuntu-latest
-    needs: deps
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install Rollup
-        run: npm install -g rollup
-      - run: yarn build
+      - run: yarn test
 
   publish-npm:
+    needs: test
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      
