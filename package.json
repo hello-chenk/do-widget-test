@@ -1,6 +1,6 @@
 {
   "name": "@sendingme/do-widget",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a widget lib",
   "type": "module",
   "publishConfig": {
