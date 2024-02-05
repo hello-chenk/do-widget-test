@@ -18,5 +18,8 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "rootDir": "."
-  }
+  },
+  "exclude": [
+    "**/*.stories.ts"
+  ]
 }

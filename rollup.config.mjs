@@ -27,6 +27,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
+  
   },
   {
     input: "src/index.ts",
