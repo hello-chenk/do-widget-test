@@ -20,6 +20,8 @@
     "rootDir": "."
   },
   "exclude": [
-    "**/*.stories.ts"
+    "**/*.stories.ts",
+    "**/*.cy.tsx",
+    "cypress"
   ]
 }

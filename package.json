@@ -23,6 +23,7 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-links": "^7.6.12",
     "@storybook/react": "^7.6.12",
     "@storybook/react-vite": "^7.6.12",
     "@types/react": "^18.2.42",
@@ -46,8 +47,5 @@
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@storybook/addon-links": "^7.6.12"
-  }
+  "types": "dist/index.d.ts"
 }
