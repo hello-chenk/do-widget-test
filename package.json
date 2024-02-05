@@ -7,11 +7,13 @@
     "access": "public"
   },
   "scripts": {
-    "test": "npm run cy:run",
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "cy:run": "cypress run --component"
+    
+    "test": "npm run cy:run",
+    "cy:run": "cypress run --component",
+    "cypress:open": "cypress open --component"
   },
   "keywords": [
     "components",

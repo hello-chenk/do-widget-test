@@ -7,7 +7,6 @@
     "strict": true,
     "skipLibCheck": true,
 
-    /* Added */
     "jsx": "react",
     "module": "ESNext",
     "declaration": true,
@@ -17,13 +16,7 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
-    "rootDir": ".",
+    "rootDir": "../",
     "types": ["cypress"]
   },
-  "exclude": [
-    "node_modules",
-    "**/*.stories.ts",
-    "cypress.config.ts",
-    "cypress", 
-  ]
 }

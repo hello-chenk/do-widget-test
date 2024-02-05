@@ -1,9 +1,9 @@
 import React from 'react'
-import Round from './Round'
+import Round from '../../../src/components/Round/Round'
 
 describe('<Round />', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<Round />)
+    cy.mount(<Round color='red' />)
   })
 })
