@@ -34,7 +34,6 @@ jobs:
         run: npm run build
       - name: Configure npm credentials
         env:
-          # NODE_AUTH_TOKEN: ${{secrets.VERDACCIO_TOKEN}}
           NPM_USERNAME: ${{ secrets.NPM_USERNAME }}
           NPM_PASSWORD: ${{ secrets.NPM_PASSWORD }}
           NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
