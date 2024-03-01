@@ -27,18 +27,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          registry-url: https://repo.sending.me/
+          registry-url: https://repo.sending.me
+      - name: Login to npm
+        run: npm login --registry=https://repo.sending.me --scope=@sendingme --username ${{ secrets.NPM_USERNAME }} --password ${{ secrets.NPM_PASSWORD }}
+        env:
+          NPM_USERNAME: ${{ secrets.NPM_USERNAME }}
+          NPM_PASSWORD: ${{ secrets.NPM_PASSWORD }}
       - name: Install dependencies
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Configure npm credentials
-        env:
-          NPM_USERNAME: ${{ secrets.NPM_USERNAME }}
-          NPM_PASSWORD: ${{ secrets.NPM_PASSWORD }}
-          NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
-        run: |
-          echo "email=${NPM_EMAIL}" >> ~/.npmrc
-          echo "_auth=$(echo -n "${NPM_USERNAME}:${NPM_PASSWORD}" | base64)" >> ~/.npmrc
-      - run: npm publish
+      - name: publish
+        run: npm publish
         
